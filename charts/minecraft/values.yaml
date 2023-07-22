@@ -51,7 +51,7 @@ securityContext:
 livenessProbe:
   command:
     - mc-health
-  initialDelaySeconds: 30
+  initialDelaySeconds: 300
   periodSeconds: 5
   failureThreshold: 20
   successThreshold: 1
@@ -59,7 +59,7 @@ livenessProbe:
 readinessProbe:
   command:
     - mc-health
-  initialDelaySeconds: 30
+  initialDelaySeconds: 300
   periodSeconds: 5
   failureThreshold: 20
   successThreshold: 1
@@ -68,7 +68,7 @@ startupProbe:
   command:
     - mc-health
   enabled: false
-  failureThreshold: 30
+  failureThreshold: 35
   periodSeconds: 10
 
 # initContainers:
